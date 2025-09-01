@@ -18,12 +18,14 @@ public class ProfileService {
     }
 
     public void updateDisplayName(UserProfile p, String displayName) {
-        throw new UnsupportedOperationException("not Mutable!");
-        // Objects.requireNonNull(p, "profile");
-        // if (displayName != null && displayName.length() > 100) {
-        //     // silently trim (inconsistent policy)
-        //     displayName = displayName.substring(0, 100);
-        // }
-        // p.Builder().setDisplayName(displayName).build(); // mutability leak
+        Objects.requireNonNull(p, "profile");
+        if (displayName != null && displayName.length() > 100) {
+            // silently trim (inconsistent policy)
+            displayName = displayName.substring(0, 100);
+        }
+        p = new UserProfile.Builder().setDisplayName(displayName).setId(p.getId()).setEmail(p.getEmail())
+        .setAddress(p.getAddress()).setGithub(p.getGithub())
+        .setMarketingOptIn(p.isMarketingOptIn()).setPhone(p.getPhone()).setTwitter(p.getTwitter())
+        .build(); // mutability leak
     }
 }

@@ -35,7 +35,7 @@ final public class UserProfile {
     public String getTwitter() { return twitter; }
     public String getGithub() { return github; }
 
-    static class Builder {
+    public static class Builder {
         private String id;
         private String email;
         private String phone;
