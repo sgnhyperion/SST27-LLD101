@@ -1,3 +1,5 @@
+package com.example.payments;
+
 public class FastPayAdapter implements PaymentGateway {
     FastPayClient client;
 
@@ -7,6 +9,6 @@ public class FastPayAdapter implements PaymentGateway {
 
     @Override
     public String charge(String customerId, int amountCents){
-        client.payNow(customerId, amountCents);
+        return client.payNow(customerId, amountCents);
     }
 }

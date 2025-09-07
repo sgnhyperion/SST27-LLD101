@@ -1,3 +1,5 @@
+package com.example.render;
+
 import java.util.HashMap;
 
 public class TextStyleFactory {

@@ -1,6 +1,5 @@
 package com.example.render;
 
-import org.w3c.dom.Text;
 
 public class Glyph {
     // Smell: style stored per instance → not memory efficient

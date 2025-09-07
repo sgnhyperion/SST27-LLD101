@@ -1,3 +1,5 @@
+package com.example.imports;
+
 import java.nio.file.Path;
 import java.util.List;
 
@@ -11,7 +13,7 @@ public class CsvProfileImporter implements ProfileImporter{
     }
 
     @Override
-    int importFrom(Path csvFile){
+    public int importFrom(Path csvFile){
         List<String[]> rows = reader.read(csvFile);
         int successCount = 0;
 

@@ -1,3 +1,5 @@
+package com.example.video;
+
 import java.nio.file.Path;
 
 public class VideoPipelineFacade {

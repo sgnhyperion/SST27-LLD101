@@ -1,3 +1,5 @@
+package com.example.payments;
+
 public class SafeCashClientAdapter implements PaymentGateway{
     SafeCashClient client;
 
@@ -7,7 +9,7 @@ public class SafeCashClientAdapter implements PaymentGateway{
 
     @Override
     public String charge(String customerId, int amountCents){
-        client.createPayment(amountCents, customerId);
+        return client.createPayment(amountCents, customerId).confirm();
     }
     
 }

@@ -1,3 +1,5 @@
+package com.example.video;
+
 public interface Sharpen {
-    public String sharpen(String framesHandle, int strength);
+    public Frame[] sharpen(Frame[] frames, int strength);
 }

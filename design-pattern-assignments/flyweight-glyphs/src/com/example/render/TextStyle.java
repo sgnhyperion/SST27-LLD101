@@ -1,3 +1,5 @@
+package com.example.render;
+
 public final class TextStyle {
     private final String font;
     private final int size;

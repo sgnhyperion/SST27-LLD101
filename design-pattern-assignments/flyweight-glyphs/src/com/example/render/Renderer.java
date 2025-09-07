@@ -1,8 +1,9 @@
 package com.example.render;
 
-import java.time.format.TextStyle;
 
 public class Renderer {
+    public Renderer(){};
+
     public int render(String text) {
         int cost = 0;
         for (char c : text.toCharArray()) {
